@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quote
+{% endblock %}
+
+{% block main %}
+
+    <h3>{{ name }}</h3>
+    <h4>Trades on: {{ exchange }}</h4>
+    <h4>Open: {{ opened }}</h4>
+    <h4>Close: {{ closed }}</h4>
+    <h4>Last Price: {{ quote }}</h4>
+
+    <form action="/quote" method="get">
+        <button class="btn btn-primary" type="submit">Get Another Quote</button>
+    </form>
+
+{% endblock %}
